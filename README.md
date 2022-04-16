@@ -74,7 +74,7 @@ Output:
 
 `Active: active (running) since Fri 2022-04-15 17:57:43 CST; 43s ago`
      
-Connect to remote Linux Server:
+Connect to Linux Server:
 
 ```linux
 ssh username@YOUR.SERVER.IP.ADDRESS
