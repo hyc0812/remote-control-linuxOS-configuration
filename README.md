@@ -32,7 +32,7 @@ Output:
 
 `200 join OK`
 
-Check the if we have joined the network:
+Check if we have joined the network:
 
 ```linux
 sudo zerotier-cli listnetworks
