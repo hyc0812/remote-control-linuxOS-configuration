@@ -3,7 +3,7 @@
 System used: Ubuntu 20.04
 
 
-### Zerotier installation on Linux
+### Install Zerotier
 
 Sign up an account on [zerotier](https://www.zerotier.com/)and create a network. It will provide us with a network id. 
 Then install the Zerotier on Linux:
