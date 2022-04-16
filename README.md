@@ -1,6 +1,8 @@
 ## Turn a Linux computer as a server and access it from everywhere
 
-System used: Ubuntu 20.04
+### System used: 
+
+Ubuntu 20.04
 
 
 ### Install Zerotier
