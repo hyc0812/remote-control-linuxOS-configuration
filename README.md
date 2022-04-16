@@ -2,73 +2,14 @@
 
 System: Ubuntu 20.04
 
-Need install SSH:
+First need install openssh-server:
 ```linux
 sudo apt install openssh-server
 ```
-Reading package lists... Done
-Building dependency tree       
-Reading state information... Done
-The following packages were automatically installed and are no longer required:
-  docutils-common libfwupdplugin1 libjs-jquery libjs-sphinxdoc
-  libjs-underscore python-babel-localedata python3-alabaster python3-babel
-  python3-docopt python3-docutils python3-feedparser python3-imagesize
-  python3-jinja2 python3-numpydoc python3-ply python3-prompt-toolkit
-  python3-roman python3-setproctitle python3-sigmavirus24-urltemplate
-  python3-sphinx python3-wcwidth sphinx-common xonsh
-Use 'sudo apt autoremove' to remove them.
-The following additional packages will be installed:
-  ncurses-term openssh-sftp-server ssh-import-id
-Suggested packages:
-  molly-guard monkeysphere ssh-askpass
-The following NEW packages will be installed:
-  ncurses-term openssh-server openssh-sftp-server ssh-import-id
-0 upgraded, 4 newly installed, 0 to remove and 36 not upgraded.
-Need to get 688 kB of archives.
-After this operation, 6,010 kB of additional disk space will be used.
-Do you want to continue? [Y/n] y
-Get:1 http://ca.archive.ubuntu.com/ubuntu focal/main amd64 ncurses-term all 6.2-0ubuntu2 [249 kB]
-Get:2 http://ca.archive.ubuntu.com/ubuntu focal-updates/main amd64 openssh-sftp-server amd64 1:8.2p1-4ubuntu0.4 [51.5 kB]
-Get:3 http://ca.archive.ubuntu.com/ubuntu focal-updates/main amd64 openssh-server amd64 1:8.2p1-4ubuntu0.4 [377 kB]
-Get:4 http://ca.archive.ubuntu.com/ubuntu focal/main amd64 ssh-import-id all 5.10-0ubuntu1 [10.0 kB]
-Fetched 688 kB in 1s (657 kB/s)           
-Preconfiguring packages ...
-Selecting previously unselected package ncurses-term.
-(Reading database ... 242699 files and directories currently installed.)
-Preparing to unpack .../ncurses-term_6.2-0ubuntu2_all.deb ...
-Unpacking ncurses-term (6.2-0ubuntu2) ...
-Selecting previously unselected package openssh-sftp-server.
-Preparing to unpack .../openssh-sftp-server_1%3a8.2p1-4ubuntu0.4_amd64.deb ...
-Unpacking openssh-sftp-server (1:8.2p1-4ubuntu0.4) ...
-Selecting previously unselected package openssh-server.
-Preparing to unpack .../openssh-server_1%3a8.2p1-4ubuntu0.4_amd64.deb ...
-Unpacking openssh-server (1:8.2p1-4ubuntu0.4) ...
-Selecting previously unselected package ssh-import-id.
-Preparing to unpack .../ssh-import-id_5.10-0ubuntu1_all.deb ...
-Unpacking ssh-import-id (5.10-0ubuntu1) ...
-Setting up openssh-sftp-server (1:8.2p1-4ubuntu0.4) ...
-Setting up openssh-server (1:8.2p1-4ubuntu0.4) ...
 
-Creating config file /etc/ssh/sshd_config with new version
-Creating SSH2 RSA key; this may take some time ...
-3072 SHA256:ogrfho45YeZxQyjvQNZBueTU1M5iiYoTiZkvZLGM6LU root@yongchang-HP (RSA)
-Creating SSH2 ECDSA key; this may take some time ...
-256 SHA256:ziE+dU2gYJANSJLpAwQh5OVi+oc2BDgCHpBOCsUCO2o root@yongchang-HP (ECDSA)
-Creating SSH2 ED25519 key; this may take some time ...
-256 SHA256:TOCnRjXguLllQN3fgBNGCYmTlJzpftVu/5VpDpTywZ4 root@yongchang-HP (ED2551
-9)
-Created symlink /etc/systemd/system/sshd.service → /lib/systemd/system/ssh.servi
-ce.
-Created symlink /etc/systemd/system/multi-user.target.wants/ssh.service → /lib/s
-ystemd/system/ssh.service.
-rescue-ssh.target is a disabled or a static unit, not starting it.
-Setting up ssh-import-id (5.10-0ubuntu1) ...
-Attempting to convert /etc/ssh/ssh_import_id
-Setting up ncurses-term (6.2-0ubuntu2) ...
-Processing triggers for systemd (245.4-4ubuntu3.15) ...
-Processing triggers for man-db (2.9.1-1) ...
-Processing triggers for ufw (0.36-6ubuntu1) ...
-yoh534@yongchang-HP:~$ sudo apt list --installed | grep openssh-server
+
+Check 
+sudo apt list --installed | grep openssh-server
 
 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
 
