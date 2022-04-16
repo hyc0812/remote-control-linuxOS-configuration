@@ -1,17 +1,11 @@
-**configuration with ssh**
+## Turn a Linux computer as a server and access it from everywhere
 
+System: Ubuntu 20.04
 
-
-yoh534@yongchang-HP:~$ ssh yoh534@10.244.46.71
-ssh: connect to host 10.244.46.71 port 22: Connection refused
-yoh534@yongchang-HP:~$ sudo apt list --installed | grep openssh-server
-[sudo] password for yoh534: 
-Sorry, try again.
-[sudo] password for yoh534: 
-
-WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
-
-yoh534@yongchang-HP:~$ sudo apt install openssh-server
+Need install SSH:
+```linux
+sudo apt install openssh-server
+```
 Reading package lists... Done
 Building dependency tree       
 Reading state information... Done
