@@ -2,68 +2,35 @@
 
 System: Ubuntu 20.04
 
-First need install openssh-server:
+### Install openssh-server:
+Install ssh:
 ```linux
 sudo apt install openssh-server
 ```
 
-
-Check 
+Check the installation process:
+```linux
 sudo apt list --installed | grep openssh-server
+```
+Output:
+`WARNING: apt does not have a stable CLI interface. Use with caution in scripts.`
+`openssh-server/focal-updates,now 1:8.2p1-4ubuntu0.4 amd64 [installed]`
 
-WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+Check ssh status:
+```linux
+sudo service ssh status
+```
+Output:
+`● ssh.service - OpenBSD Secure Shell server`
+`Loaded: loaded (/lib/systemd/system/ssh.service; enabled; vendor preset: e>`
+`Active: active (running) since Fri 2022-04-15 17:57:43 CST; 43s ago`
+     
+Connect to remote Linux Server:
 
-openssh-server/focal-updates,now 1:8.2p1-4ubuntu0.4 amd64 [installed]
-yoh534@yongchang-HP:~$ sudo service ssh status
-● ssh.service - OpenBSD Secure Shell server
-     Loaded: loaded (/lib/systemd/system/ssh.service; enabled; vendor preset: e>
-     Active: active (running) since Fri 2022-04-15 17:57:43 CST; 43s ago
-       Docs: man:sshd(8)
-             man:sshd_config(5)
-   Main PID: 10431 (sshd)
-      Tasks: 1 (limit: 23778)
-     Memory: 1.0M
-     CGroup: /system.slice/ssh.service
-             └─10431 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
-
-Apr 15 17:57:43 yongchang-HP systemd[1]: Starting OpenBSD Secure Shell server...
-Apr 15 17:57:43 yongchang-HP sshd[10431]: Server listening on 0.0.0.0 port 22.
-Apr 15 17:57:43 yongchang-HP sshd[10431]: Server listening on :: port 22.
-Apr 15 17:57:43 yongchang-HP systemd[1]: Started OpenBSD Secure Shell server.
-
-yoh534@yongchang-HP:~$ ssh yoh534@10.244.46.71
-The authenticity of host '10.244.46.71 (10.244.46.71)' can't be established.
-ECDSA key fingerprint is SHA256:ziE+dU2gYJANSJLpAwQh5OVi+oc2BDgCHpBOCsUCO2o.
-Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
-Warning: Permanently added '10.244.46.71' (ECDSA) to the list of known hosts.
-yoh534@10.244.46.71's password: 
-Welcome to Ubuntu 20.04.4 LTS (GNU/Linux 5.13.0-39-generic x86_64)
-
- * Documentation:  https://help.ubuntu.com
- * Management:     https://landscape.canonical.com
- * Support:        https://ubuntu.com/advantage
-
-27 updates can be applied immediately.
-20 of these updates are standard security updates.
-To see these additional updates run: apt list --upgradable
-
-Your Hardware Enablement Stack (HWE) is supported until April 2025.
-
-The programs included with the Ubuntu system are free software;
-the exact distribution terms for each program are described in the
-individual files in /usr/share/doc/*/copyright.
-
-Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
-applicable law.
-
-yoh534@yongchang-HP:~$ 
-
-
-
-
-
-**Installation and configuration with remote control a linux OS!!**
-
+```linux
+ssh username@YOUR.REMOTE.IP.ADDRESS
+```
+> Replace your username and IP address of your remote Linux server.
 
 
 
