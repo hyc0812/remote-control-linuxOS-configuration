@@ -60,6 +60,7 @@ sudo apt list --installed | grep openssh-server
 ```
 Output:
 `WARNING: apt does not have a stable CLI interface. Use with caution in scripts.`
+
 `openssh-server/focal-updates,now 1:8.2p1-4ubuntu0.4 amd64 [installed]`
 
 Check ssh status:
@@ -68,13 +69,15 @@ sudo service ssh status
 ```
 Output:
 `● ssh.service - OpenBSD Secure Shell server`
+
 `Loaded: loaded (/lib/systemd/system/ssh.service; enabled; vendor preset: e>`
+
 `Active: active (running) since Fri 2022-04-15 17:57:43 CST; 43s ago`
      
 Connect to remote Linux Server:
 
 ```linux
-ssh username@YOUR.REMOTE.IP.ADDRESS
+ssh username@YOUR.SERVER.IP.ADDRESS
 ```
-> Replace your username and IP address of your remote Linux server.
+> Replace your username and IP address of your Linux server.
 
