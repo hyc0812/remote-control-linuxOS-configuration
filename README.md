@@ -35,7 +35,7 @@ ssh username@YOUR.REMOTE.IP.ADDRESS
 
 ### Zerotier installation on Linux
 
-Sign up an account on [zerotier](https://www.zerotier.com/)create a network 
+Sign up an account on [zerotier](https://www.zerotier.com/)and create a network. Then install the Zerotier:
 
 ```linux
 curl -s https://install.zerotier.com | sudo bash
