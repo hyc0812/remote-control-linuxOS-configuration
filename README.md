@@ -2,6 +2,50 @@
 
 System: Ubuntu 20.04
 
+
+
+### Zerotier installation on Linux
+
+Sign up an account on [zerotier](https://www.zerotier.com/)and create a network. It will provide us with a network id. 
+Then install the Zerotier on Linux:
+
+```linux
+curl -s https://install.zerotier.com | sudo bash
+```
+Output:
+`......`
+`*** Success! You are ZeroTier address [ eaXXXXXaXXe ].`
+> Here provide you the remore server address.
+
+Start and enable the zerotier service:
+```linux
+sudo systemctl start zerotier-one.service
+sudo systemctl enable zerotier-one.service
+```
+
+```linux
+sudo zerotier-cli join af415e486f35688c
+```
+Output:
+
+`200 join OK`
+
+Check the if we have joined the network:
+
+```linux
+sudo zerotier-cli listnetworks
+```
+`200 listnetworks <nwid> <name> <mac> <status> <type> <dev> <ZT assigned ips>`
+
+`200 listnetworks af415e486f35688c Yongchang-network_001 8e:85:b7:e9:ee:f0 OK PRIVATE zt44xgwihd 10.244.46.71/16`
+
+Extra configuration for inbound and outbound rules, `sudo` required:
+
+```linux
+iptables -I FORWARD -i ztc25p4azo -j ACCEPT
+iptables -I FORWARD -o ztc25p4azo -j ACCEPT
+iptables -t nat -I POSTROUTING -o ztc25p4azo -j MASQUERADE
+```
 ### Install openssh-server:
 Install ssh:
 ```linux
@@ -32,35 +76,3 @@ ssh username@YOUR.REMOTE.IP.ADDRESS
 ```
 > Replace your username and IP address of your remote Linux server.
 
-
-### Zerotier installation on Linux
-
-Sign up an account on [zerotier](https://www.zerotier.com/)and create a network. Then install the Zerotier:
-
-```linux
-curl -s https://install.zerotier.com | sudo bash
-```
-Output:
-`......`
-`*** Success! You are ZeroTier address [ eaXXXXXaXXe ].`
-> Here provide you the remore server address.
-
-Start and enable the zerotier service:
-```linux
-sudo systemctl start zerotier-one.service
-sudo systemctl enable zerotier-one.service
-```
-Synchronizing state of zerotier-one.service with SysV service script with /lib/systemd/systemd-sysv-install.
-Executing: /lib/systemd/systemd-sysv-install enable zerotier-one
-yoh534@yongchang-HP:~$ sudo zerotier-cli join af415e486f35688c
-200 join OK
-yoh534@yongchang-HP:~$ sudo zerotier-cli listnetworks
-200 listnetworks <nwid> <name> <mac> <status> <type> <dev> <ZT assigned ips>
-200 listnetworks af415e486f35688c Yongchang-network_001 8e:85:b7:e9:ee:f0 OK PRIVATE zt44xgwihd 10.244.46.71/16
-yoh534@yongchang-HP:~$ iptables -I FORWARD -i ztc25p4azo -j ACCEPT
-Fatal: can't open lock file /run/xtables.lock: Permission denied
-yoh534@yongchang-HP:~$ sudo su
-root@yongchang-HP:/home/yoh534# iptables -I FORWARD -i ztc25p4azo -j ACCEPT
-root@yongchang-HP:/home/yoh534# iptables -I FORWARD -o ztc25p4azo -j ACCEPT
-root@yongchang-HP:/home/yoh534# iptables -t nat -I POSTROUTING -o ztc25p4azo -j MASQUERADE
-root@yongchang-HP:/home/yoh534# 
