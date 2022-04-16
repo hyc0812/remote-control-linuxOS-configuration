@@ -5,23 +5,25 @@ System used: Ubuntu 20.04
 
 ### Install Zerotier
 
-Sign up an account on [zerotier](https://www.zerotier.com/)and create a network. It will provide us with a network id. 
+Sign up an account on [zerotier](https://www.zerotier.com/) and create a network. It will provide us with a network ID. 
 Then install the Zerotier on Linux:
 
 ```linux
 curl -s https://install.zerotier.com | sudo bash
 ```
 Output:
+
 `......`
+
 `*** Success! You are ZeroTier address [ eaXXXXXaXXe ].`
-> Here provide you the remore server address.
+
 
 Start and enable the zerotier service:
 ```linux
 sudo systemctl start zerotier-one.service
 sudo systemctl enable zerotier-one.service
 ```
-
+Join the network created previously using the network ID:
 ```linux
 sudo zerotier-cli join af415e486f35688c
 ```
