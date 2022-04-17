@@ -1,8 +1,12 @@
-## Turn a Linux computer as a server and access it from everywhere
+## Turn a computer as a server and access it from everywhere
 
 ### System used: 
 
 Ubuntu 20.04
+
+### Tools will be used:
+- [Zerotier](https://www.zerotier.com/)
+- openssh-server
 
 
 ### Install Zerotier
