@@ -45,7 +45,7 @@ sudo zerotier-cli listnetworks
 ```
 `200 listnetworks <nwid> <name> <mac> <status> <type> <dev> <ZT assigned ips>`
 
-`200 listnetworks af415e486f35688c Yongchang-network_001 8e:85:b7:e9:ee:f0 OK PRIVATE zt44xgwihd 10.244.46.71/16`
+`200 listnetworks afXXXXXXXXXX88c ......`
 
 Extra configuration for inbound and outbound rules, `sudo` required:
 
