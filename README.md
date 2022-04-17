@@ -65,6 +65,7 @@ Check the installation process:
 sudo apt list --installed | grep openssh-server
 ```
 Output:
+
 `WARNING: apt does not have a stable CLI interface. Use with caution in scripts.`
 
 `openssh-server/focal-updates,now 1:8.2p1-4ubuntu0.4 amd64 [installed]`
