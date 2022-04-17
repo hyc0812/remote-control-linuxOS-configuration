@@ -2,7 +2,7 @@
 
 ### System used: 
 
-Ubuntu 20.04
+- Ubuntu 20.04
 
 ### Tools will be used:
 - [Zerotier](https://www.zerotier.com/)
