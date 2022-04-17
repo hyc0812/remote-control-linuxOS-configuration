@@ -81,11 +81,13 @@ Output:
 `Loaded: loaded (/lib/systemd/system/ssh.service; enabled; vendor preset: e>`
 
 `Active: active (running) since Fri 2022-04-15 17:57:43 CST; 43s ago`
+
+`......`
      
 Connect to Linux Server:
 
 ```linux
 ssh username@YOUR.SERVER.IP.ADDRESS
 ```
-> Replace your username and IP address of your Linux server.
+> Replace your username and IP address.
 
