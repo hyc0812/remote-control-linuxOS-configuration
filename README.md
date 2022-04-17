@@ -47,7 +47,7 @@ sudo zerotier-cli listnetworks
 
 `200 listnetworks afXXXXXXXXXX88c ......`
 
-Extra configuration for inbound and outbound rules, `sudo` required:
+Extra configuration for inbound and outbound rules, `sudo` might required:
 
 ```linux
 iptables -I FORWARD -i ztc25p4azo -j ACCEPT
