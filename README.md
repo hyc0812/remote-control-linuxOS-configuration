@@ -32,7 +32,7 @@ sudo systemctl enable zerotier-one.service
 ```
 Join the network created previously using the network ID:
 ```linux
-sudo zerotier-cli join af415e486f35688c
+sudo zerotier-cli join YOUR_NETWORK_ID
 ```
 Output:
 
