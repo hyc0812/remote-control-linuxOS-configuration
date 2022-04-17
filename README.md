@@ -74,6 +74,7 @@ Check ssh status:
 sudo service ssh status
 ```
 Output:
+
 `● ssh.service - OpenBSD Secure Shell server`
 
 `Loaded: loaded (/lib/systemd/system/ssh.service; enabled; vendor preset: e>`
