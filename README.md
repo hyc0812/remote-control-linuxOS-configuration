@@ -90,3 +90,5 @@ Connect to Linux Server:
 ssh username@YOUR.SERVER.IP.ADDRESS
 ```
 > Replace your username and IP address.
+
+### Enjoy!
